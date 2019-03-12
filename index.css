@@ -1,0 +1,61 @@
+html, body { 
+height: 100%;
+margin: 0;
+}
+
+#map {
+width: 600px; 
+height: 400px; 
+}
+
+.header, .footer, .content{
+width: 100%;
+}
+
+.header{
+background: linear-gradient(180deg, orangered, firebrick);
+height: 2.5cm;
+color: white;
+font-family: Arial;
+position: fixed;
+top: 0;
+left: 0;
+border-bottom: 2px solid silver;
+}
+
+div.header > div > p {
+ line-height: 50%
+}
+
+.header_img{
+padding: 15px;
+height: 69px;
+width: 69px;
+position: relative;
+float: left;
+}
+
+.header_title{
+position: relative;
+margin-left: 5px;
+margin-top: 8px;
+float: left;
+}
+
+.content {
+height: 100%;
+background-color: blue;
+
+}
+
+.footer{
+background: linear-gradient(0deg, orangered, firebrick);
+height: 1cm;
+color: white;
+font-family: Arial;
+position: fixed;
+bottom: 0;
+left: 0;
+border-top: 2px solid silver;
+
+}

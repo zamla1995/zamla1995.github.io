@@ -1,23 +1,45 @@
+<!DOCTYPE HTML>
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title> первая страница </title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<title>FPS</title>
+		<link rel="stylesheet" href="leaflet.css" />
+		<!--[if lte IE 8]>
+		<link rel="stylesheet" href="leaflet.ie.css" />
+		<![endif]-->
+		<script src="js/dist/leaflet.js"></script>
+		<style>
+			#map {width: 600px; height: 400px; }
+		</style>
 	</head>
-	
 	<body>
-		<p>
-			какой то текст
-			<script>
-				var name;
-				var admin;
-				
-				name = "Василий";
-				admin = name
-
-				var test = confirm("Test", "")
-				alert("Вам лет " + test)
+		
+		<div class = "header">
+			<div class = "header_img">
+				<img src = "img/burn.png" alt = "burn.png"></img>
+			</div>
+			<div class = "header_title">
+				<p style = "font-size: 25px;"><b>FPS</b></p>
+				<p style = "font-size: 14px;">Fire Prevention System By Remote Sensing and Geospatial Data</p>
+			</div>
+			</div>
+		
+		
+		<div class = "content">
+			<div id="map"></div>
+			<script type='text/javascript'>
+			//Определяем карту, координаты центра и начальный масштаб
+			var map = L.map('map').setView([56.326944, 44.0075], 12);
+			//Добавляем на нашу карту слой OpenStreetMap
+			L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				attribution: '&copy; <a rel="nofollow" href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+			}).addTo(map);
 			</script>
-		</p>
+		</div>
+
+		<div class = "footer">
+			(с)Moscow State University, 2019
+		</div>
 	</body>
-	
 </html>
