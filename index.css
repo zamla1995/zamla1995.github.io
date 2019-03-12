@@ -4,8 +4,9 @@ margin: 0;
 }
 
 #map {
-width: 600px; 
-height: 400px; 
+width: 100%; 
+height: 100%;
+z-index: 1;
 }
 
 .header, .footer, .content{
@@ -14,13 +15,14 @@ width: 100%;
 
 .header{
 background: linear-gradient(180deg, orangered, firebrick);
-height: 2.5cm;
+height: 80px;
 color: white;
 font-family: Arial;
 position: fixed;
 top: 0;
 left: 0;
 border-bottom: 2px solid silver;
+z-index: 2;
 }
 
 div.header > div > p {
@@ -28,9 +30,10 @@ div.header > div > p {
 }
 
 .header_img{
-padding: 15px;
-height: 69px;
-width: 69px;
+padding-left: 10px;
+padding-top: 5px;
+height: 66px;
+width: 66px;
 position: relative;
 float: left;
 }
@@ -43,19 +46,22 @@ float: left;
 }
 
 .content {
-height: 100%;
+height: auto;
 background-color: blue;
-
+z-index: 1;
+position: fixed;
+top: 82px;
+bottom: 37px;
 }
 
 .footer{
 background: linear-gradient(0deg, orangered, firebrick);
-height: 1cm;
+height: 35px;
 color: white;
 font-family: Arial;
 position: fixed;
 bottom: 0;
 left: 0;
 border-top: 2px solid silver;
-
+z-index: 2;
 }
