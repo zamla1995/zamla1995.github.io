@@ -1,6 +1,6 @@
 "use strict";
 
-var GeoTIFF = require("./geotiff.js");
+var GeoTIFF = require("js/geotiff.js");
 
 /**
  * Main parsing function for GeoTIFF files.
