@@ -137,7 +137,7 @@
 	bottom: 0;
 	}
 .leaflet-left {
-	left: 0;
+	right: 0;
 	}
 .leaflet-control {
 	float: left;
@@ -147,13 +147,13 @@
 	float: right;
 	}
 .leaflet-top .leaflet-control {
-	margin-top: 10px;
+	margin-top: 200px;
 	}
 .leaflet-bottom .leaflet-control {
 	margin-bottom: 10px;
 	}
 .leaflet-left .leaflet-control {
-	margin-left: 10px;
+	margin-right: 10px;
 	}
 .leaflet-right .leaflet-control {
 	margin-right: 10px;

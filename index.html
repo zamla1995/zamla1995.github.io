@@ -4,44 +4,130 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="index.css">
 		<link rel="shortcut icon" href="img/fire.png" type="image/x-icon">
-		<title>FPS</title>
+		<title>СПМ ПОПТ</title>
 		<link rel="stylesheet" href="leaflet.css" />
 		<!--[if lte IE 8]>
-		
-		<link rel="stylesheet" href="leaflet.ie.css" />
+			<link rel="stylesheet" href="leaflet.ie.css" />
 		<![endif]-->
 		<script src="leaflet.js"></script>
-		<style>
+		<script src="PA_fires.js" type="text/javascript"></script>
+		
+		<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+		<script src="js/l.control.geosearch.js"></script>
+		<script src="js/l.geosearch.provider.openstreetmap.js"></script>
+		<link rel="stylesheet" href="css/l.geosearch.css" />
 
-		</style>
+		<script src="js/geotiff.js"></script>
+    	<script src="js/main.js"></script>
+    	<script src="js/plotty.js"></script>
+    	<script src="js/leaflet-geotiff.js"></script>
+    	<!-- Load any renderer you need -->
+    	<script src="js/leaflet-geotiff-plotty.js"></script>
+		<script src="js/leaflet-geotiff-vector.js"></script>
+		
+
+
 	</head>
 	<body>
 		
-		<div class = "header">
-			<div class = "header_img">
-				<img src = "img/burn.png" alt = "burn.png"></img>
+		<header class = "header">
+			<div class = "header_name">
+				<div class = "header_img">
+					<img src = "img/logo5.png" alt = "иконка" height = 70px></img>
+				</div>
+				<div class = "header_title">
+					<div class = "title_acronym">
+						<b>СПМ ПОПТ</b>
+					</div>
+					<div class = "title_full">
+						Система прогнозного мониторинга <br> пожарной опасности природных территорий	
+					</div>
+				</div>
 			</div>
-			<div class = "header_title">
-				<p style = "font-size: 25px;"><b>FPS</b></p>
-				<p style = "font-size: 14px;">Fire Prevention System By Remote Sensing and Geospatial Data</p>
+			<div class = "header_infolist_upper">
+				Блоки дипломной
 			</div>
+			<div class = "header_infolist_bottom">
+				Блоки информации
 			</div>
+			<div class = "header_contacts">
+				<img src = "img/contact.png" alt = "иконка" height = 52px class = "icon_layers"></img>
+			</div>			
+		</header>
 		
 		
-		<div class = "content">
-			<div id="map"></div>
-			<script type='text/javascript'>
-			//Определяем карту, координаты центра и начальный масштаб
-			var map = L.map('map').setView([56.326944, 44.0075], 12);
-			//Добавляем на нашу карту слой OpenStreetMap
-			L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-				attribution: '&copy; <a rel="nofollow" href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-			}).addTo(map);
-			</script>
-		</div>
+		<main class = "content">
+			<div id = "map">
+				
+				<div class = "layers">
+					<div class = "layers_iconbox">
+						<a href="#hidden1" onclick="view('hidden1'); return false">
+							<img src = "img/layers1.png" alt = "иконка" height = 40px class = "icon_layers"></img>
+						</a>
+					</div>
+					<div id="hidden1" class = "layers_hidden">
+						<div class = "layers_head">
+							Слои
+						</div>
+						<div  class = "layers_hide">
+							<a href="#hidden1" onclick="hide('hidden1'); return false">
+								<img src = "img/delete.png" alt = "иконка"  height = 40px class = "icon_layers"></img>
+							</a>
+						</div>
+						<div class = "layers_content">
+								<p>  </p>
+								<p>  </p>
+								<p> <br><br> <br>Слой1 </p>
+								<p> Слой2 </p>
+								<p> Слой3 </p>
+								<p> Слой4 </p>
+								<p> Слой5 </p>
+								<textarea id="text"></textarea>
+						</div>
+					</div>
+				</div>
 
-		<div class = "footer">
+				<div id = "coordinates" class = "coords">
+					<div id = "coordinates1" class = "coords1"></div>
+					<div id = "coordinates2" class = "coords2"></div>
+				</div>
+				
+				<a href="#test" onclick="view('test'); return false">
+					<div class = "map_search" title = "Адресный поиск">
+						<div class = "icon_mapsearch">
+							<img src = "img/map_search.png" alt = "иконка" height = 40px class = "icon_layers"></img>
+						</div>
+					</div>
+					<div id="hidden2" class = "mapsearch_hidden">
+						поиск...
+					</div>
+				
+				</a>
+				
+				<div class = "archive">
+					<img src = "img/archive.png" alt = "иконка" height = 40px class = "icon_layers"></img>
+				</div>
+				
+				<div class = "plus">
+					<img src = "img/plus.png" alt = "иконка" height = 40px class = "icon_layers"></img>
+				</div>
+				
+				<div class = "timescale">
+					Временная шкала...
+				</div>
+
+			</div>
+			
+			<script type='text/javascript' src="index.js"></script>
+			
+			
+		</main>
+		
+
+		<footer class = "footer">
 			(с)Moscow State University, 2019
-		</div>
+		</footer>
+		
 	</body>
+	
 </html>
